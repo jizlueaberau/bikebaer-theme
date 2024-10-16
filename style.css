@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/*
+Theme Name: Bikebaer
+Theme URI: https://www.bikebear.ch
+Author: Kuckmal GmbH
+Author URI: https://kuckmal.gmbh
+Description: Custom WordPress Theme for Bikebär
+Requires at least: 6.6.2
+Requires PHP: 8.1
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: bikebaer
+*/
+
+/* Variables */
+:root {
+	--font-sans: "Open Sans", Helvetica, sans-serif;
+	--font-size: 20px;
+	--transition-dur: 0.3s;
+  --text-color: #0d0d0d;
+}
+
+@media (min-width: 568px) {
+  :root {
+    --font-size: 24px;
+  }
+}
+
+/* Styles */
+body, html {
+	height: 100%;
+}
+body {
+	font-family: var(--font-sans);
+	font-size: var(--font-size);
+	line-height: 1.5;
+	color: var(--text-color);
+}
+p {
+
+}
+p.lead {
+	font-size: 2rem;
+	font-weight: 500;
+}
+em {
+  font-style: normal;
+  font-size: 1.25rem;
+}
+a {
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+}
+a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  bottom: -2px; left: 0;
+  transition: all .4s ease-out;
+}
+a:hover::before {
+  width: 0%;
+}
+#header a:before,
+#footer .logo a:before,
+#footer .social-media a:before {
+  display: none;
+}
+#copy a:link,
+#copy a:visited {
+  color: #ffffff;
+}
+#copy a:hover {
+  text-decoration: underline;
+}
+h1,h2,h3 {
+	font-weight: 800;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1em;
+}
+h4 {
+
+}
+.no-gutter > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* Button Styles */
+.btn {
+  padding: 20px 30px;
+  display: inline-block;
+  border: none;
+  transiation: var(--transition-dur);
+  font-weight: bold;
+
+}
+.btn:hover {
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+}
+.btn.btn-primary {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 6px #000;
+  border-radius: 10px;
+  display: block;
+}
+.btn-primary:hover {
+  background-position: right center; /* change bg direction here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Header */
+
+#header {
+	position: relative;
+	top: 0; left: 0;
+	width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+#header .cta {
+  position: absolute;
+  top: 5%; left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header .logo-wrapper .gradient {
+  padding: 1rem 0 0;
+}
+#header .logo-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+/* page styles */
+
+.home #header {
+  height: 100%;
+}
+.home #header .logo-wrapper {
+  position: absolute;
+  top: 0; left: 0;
+}
+.home #header .logo-wrapper .gradient {
+  background: rgb(4,4,4);
+  background: linear-gradient(180deg, rgba(4,4,4,1) 0%, rgba(0,0,0,0.33) 80%, rgba(0,0,0,0) 100%);
+}
+
+/* Logo */
+
+.home #logo {
+  height: 240px;
+}
+.page #logo {
+  height: 120px;
+}
+
+@media (min-width: 568px) {}
+
+@media (min-width: 768px) {
+  .home #logo {
+    height: 320px;
+  }
+  #header .cta {
+    top: 10%;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/* Content */
+
+#content {
+  padding: 2rem 0;
+}
+.home #content p:first-child {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 568px) {}
+
+@media (min-width: 768px) {
+  #content {
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/* Sitefooter */
+
+#footer {
+	position: relative;
+}
+#footer .inner-footer {
+  padding: 2rem 0;
+  background-color: #f7f7f7;
+}
+#footer p,
+#footer a {}
+a.some-link {
+	display: inline-block;
+	transition: var(--transition-dur);
+}
+a.some-link:hover {
+	opacity: 70%;
+}
+#footer .logo {
+  text-align: center;
+}
+#footer .logo img {
+  height: 160px;
+  margin: 0 auto;
+}
+.some-link img {}
+#footer .contacts,
+#footer .officehours {
+  padding-top: 1rem;
+}
+#footer .logo {
+  padding: 2rem 0 1rem;
+}
+#footer .social-media {
+  padding: 0.5rem 0;
+  list-style-type: none;
+}
+#copy {
+	background-color: #000;
+	padding: 0;
+}
+#copy p {
+	color: #fff;
+	font-size: 1rem;
+	line-heigth: 40px;
+	vertical-align: center;
+	padding: 10px 0;
+	margin-bottom: 0px !important;
+}
+
+@media (min-width: 568px) {}
+
+@media (min-width: 768px) {
+  #footer .logo img {
+    height: 240px;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/* Animated Icon */
+
+.ico {
+  margin: 0 auto;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  margin-left: -25px;
+  transform: translateY(-50%);
+  filter: url("#goo");
+}
+.ico .circle {
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: 0%;
+}
+.ico .circle.circle-top {
+  height: 16.666666666px;
+  width: 20.833333333px;
+  -webkit-animation: blob-1-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+          animation: blob-1-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  z-index: 0;
+  top: 0;
+}
+.ico .circle.circle-bottom {
+  height: 16.666666666px;
+  width: 20.833333333px;
+  -webkit-animation: blob-2-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+          animation: blob-2-anim 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  z-index: 9;
+  bottom: 0px;
+}
+.ico .st-arrow {
+  fill: #000000;
+  -webkit-animation: scrolly 3s cubic-bezier(0.77, 0, 0.175, 1) forwards infinite;
+          animation: scrolly 3s cubic-bezier(0.77, 0, 0.175, 1) forwards infinite;
+  perspective: 9000px;
+  transform: translateZ(0);
+  transform-origin: bottom;
+}
+
+.svg {
+  z-index: 9;
+  position: relative;
+}
+
+@-webkit-keyframes blob-1-anim {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  14% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+  24% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes blob-1-anim {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  14% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+  24% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@-webkit-keyframes blob-2-anim {
+  0% {
+    transform: scale(1) translate(-50%, 10px);
+  }
+  30% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+  70% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+  95% {
+    transform: scale(1) translate(-50%, 13px);
+  }
+  100% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+}
+@keyframes blob-2-anim {
+  0% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+  30% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+  70% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+  95% {
+    transform: scale(1) translate(-50%, 13px);
+  }
+  100% {
+    transform: scale(1) translate(-50%, 5px);
+  }
+}
+@-webkit-keyframes scrolly {
+  0% {
+    transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+  }
+  30% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+  70% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+  95% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+  100% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+}
+@keyframes scrolly {
+  0% {
+    transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+  }
+  30% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+  70% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+  }
+  95% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+  100% {
+    transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+  }
+}
