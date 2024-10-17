@@ -68,8 +68,10 @@ a:hover::before {
   width: 0%;
 }
 #header a:before,
+#content .sb-feed-container a:before,
 #footer .logo a:before,
-#footer .social-media a:before {
+#footer .social-media a:before,
+#termly-code-snippet-support a:before {
   display: none;
 }
 #copy a:link,
@@ -215,6 +217,23 @@ h4 {
     padding: 4rem 0;
   }
 }
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/* Reviews Feed Style */
+
+.sb-feed-header-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 568px) {}
+
+@media (min-width: 768px) {}
 
 @media (min-width: 992px) {}
 
