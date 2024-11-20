@@ -7,6 +7,10 @@
  * @package bikebaer
  * @since Bikebaer Custom Theme 1.0
  */
+
+// getting background image from kirki customizer
+$bgImage = get_theme_mod( 'header_image' );
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,6 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark" />
     <link rel="preload" as="styles" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="preload" as="image" href="<?php echo $bgImage['url']; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     
     <?php wp_head(); ?>
@@ -35,7 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<?php if ( is_front_page() ) { ?>
 
-		<?php $bgImage = get_theme_mod( 'header_image' ); ?>
+		
 
 		<section id="header" style="background-image:url('<?php echo $bgImage['url']; ?>');">
 			<div class="container-fluid">

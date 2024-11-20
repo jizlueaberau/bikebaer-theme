@@ -107,8 +107,8 @@ em {
 }
 a {
   position: relative;
-  color: #000000;
-  text-decoration: none;
+  color: #000000 !important;
+  text-decoration: none !important;
 }
 a:before {
   content: "";
