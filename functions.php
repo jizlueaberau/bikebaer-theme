@@ -11,6 +11,7 @@ function bikebaer_assets() {
 
 	// Enqueue CSS Files
 	wp_enqueue_style( 'bootstrap', get_theme_file_uri('css/bootstrap.css'), array(), 'v5.3.3', 'all' );
+	wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array( 'bootstrap' ), 'v1.2', 'all' );
 
 }
 add_action( 'wp_enqueue_scripts', 'bikebaer_assets' );

@@ -28,7 +28,6 @@ $bgImage = get_theme_mod( 'header_image' );
     <meta name="color-scheme" content="light dark" />
     <link rel="preload" as="styles" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="preload" as="image" href="<?php echo $bgImage['url']; ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     
     <?php wp_head(); ?>
 
