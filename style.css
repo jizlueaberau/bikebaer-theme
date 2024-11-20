@@ -105,12 +105,15 @@ em {
   font-style: normal;
   font-size: 1.25rem;
 }
-a {
+#header a,
+#content a,
+#footer a {
   position: relative;
-  color: #000000 !important;
-  text-decoration: none !important;
+  color: #000000;
+  text-decoration: none;
 }
-a:before {
+#content a:before,
+#footer a:before {
   content: "";
   display: block;
   width: 100%;
@@ -121,7 +124,8 @@ a:before {
   bottom: -2px; left: 0;
   transition: all .4s ease-out;
 }
-a:hover::before {
+#content a:hover::before,
+#footer a:hover::before {
   width: 0%;
 }
 #header a:before,
