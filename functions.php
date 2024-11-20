@@ -25,6 +25,16 @@ function smartwp_remove_wp_block_library_css(){
 } 
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
+// Remove Swiper Library from Elementor embed
+// https://github.com/elementor/elementor/issues/10632
+function remove_jquery_sticky() {
+    if ( ! is_admin()) {
+		wp_dequeue_script( 'swiper' );
+		wp_deregister_script( 'swiper' );
+    }
+}
+add_action( 'elementor/frontend/after_register_scripts', 'remove_jquery_sticky' );
+
 /*
 	Enable SVG Upload
 	https://www.sven-hoerig.de/ratgeber/wordpress-svg-upload-aktivieren/
