@@ -12,7 +12,7 @@ function bikebaer_assets() {
 	// Enqueue CSS Files
 	// wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap', array(), '1.0', 'all' );
 	wp_enqueue_style( 'bootstrap', get_theme_file_uri('css/bootstrap.css'), array(), 'v5.3.3', 'all' );
-	wp_enqueue_style( 'bikebaer', get_stylesheet_uri(), array('bootstrap'), '1.0', 'all' );
+	//wp_enqueue_style( 'bikebaer', get_stylesheet_uri(), array('bootstrap'), '1.0', 'all' );
 
 }
 add_action( 'wp_enqueue_scripts', 'bikebaer_assets' );

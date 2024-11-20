@@ -22,7 +22,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark" />
-    <link rel="preload" as="style" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="preload" as="styles" href="<?php echo get_stylesheet_uri(); ?>">
     
     <?php wp_head(); ?>
 
